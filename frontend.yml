@@ -1,5 +1,5 @@
-- name: Roboshop Project - Frontend
-  host: all
+- name: RoboShop Project - Frontend
+  hosts: all
   become: true
   tasks:
     - name: Install Nginx
