@@ -9,14 +9,14 @@
 #func_exit_status
 
 - name: Setup systmd service file
-  ansible.builtin.systemd:
+  ansible.builtin.copy:
     src: {{component}}.service
-    dest: /etc/systemn.systemd:
-    name: d/system/${{component}}.service
+    dest: /etc/systemd/system/{{component}}.service
 
-- name: Start ${{component}} Service
+
+- name: start ${{component}} Service
   ansible.builtin.systemd:
    name: {{component}}
    state: restarted
    enabled: yes
-   daemon: yes
+   daemon_reload: yes
