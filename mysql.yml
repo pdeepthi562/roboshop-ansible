@@ -1,4 +1,4 @@
-- name: Mysql Setup
+- name: Mysql setup
   hosts: all
   become: true
   tasks:
@@ -15,9 +15,9 @@
         name: mysql-community-server
         state: installed
 
-    - name: Restart mySQL service
+    - name: start mySQL service
       ansible.builtin.systemd:
-        name: mysql
+        name: mysqld
         state: restarted
         enabled: yes
 
