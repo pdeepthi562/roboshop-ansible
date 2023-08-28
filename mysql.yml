@@ -8,7 +8,7 @@
         dest: /etc/yum.repos.d/mysql.repo
 
     - name: Disable mySQL Version
-      ansible.builtin.copy: yum module disable mysql -y
+      ansible.builtin.shell: yum module disable mysql -y
 
     - name: Install mySQL Community server
       ansible.builtin.yum:
