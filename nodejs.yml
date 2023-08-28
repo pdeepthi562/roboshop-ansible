@@ -10,7 +10,7 @@
 - name: App Pre-requisites
   ansible.builtin.import_tasks: app-preq.yml
 
-- name: Dowenload NodeJS Dependancies
+- name: Download NodeJS Dependancies
   ansible.builtin.shell: npm install
   args:
     chdir: /app
