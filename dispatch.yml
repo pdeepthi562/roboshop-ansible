@@ -1,8 +1,8 @@
-- name: Dispatch Setup
+- name: Cart Setup
   hosts: all
   become: true
   vars:
-    component: dispatch
+    component: cart
   tasks:
     - name: Nodejs Setup
       ansible.builtin.import_tasks: nodejs.yml
