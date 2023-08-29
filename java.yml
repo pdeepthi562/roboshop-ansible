@@ -1,5 +1,3 @@
-
-
 - name: Install Maven
   ansible.builtin.yum:
     name: Maven
@@ -17,7 +15,7 @@
   ansible.builtin.import_tasks: mysql-schema.yml
   when: schema is defined
 
-- name: systemd setup
+- name: systemD setup
   ansible.builtin.import_tasks: systemd-setup.yml
 #
 #    echo -e "\e[36m>>>>>>>>> Install maven <<<<<<<<<<<<\e[0m"
